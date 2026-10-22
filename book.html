@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The printed Shadow Study, a book of transparent layers, found letterforms, and everyday shadows.">
+<title>Book — SHADOW STUDY</title>
+<script src="chapter-palette.js?v=20261020-8"></script><link rel="stylesheet" href="style.css?v=20261020-8"><link rel="stylesheet" href="chapter-nav.css?v=20261020-8"><link rel="stylesheet" href="book.css?v=20261020-8"><link rel="stylesheet" href="page-transition.css?v=20261020-8">
+<script>try{var t=JSON.parse(sessionStorage.getItem('shadow-page-transition'));if(t&&t.path===location.pathname&&Date.now()-t.time<10000){document.documentElement.classList.add('is-arriving');document.documentElement.style.setProperty('--wipe-color',t.color);setTimeout(function(){document.documentElement.classList.remove('is-arriving','is-revealing')},2500)}}catch(e){}</script>
+<script src="book-data.js?v=20261020-8" defer></script><script src="book.js?v=20261020-8" defer></script><script src="page-transition.js?v=20261020-8" defer></script>
+<link rel="stylesheet" href="light-studies.css?v=20261020-8"><script src="light-studies.js?v=20261020-8" defer></script><link rel="stylesheet" href="nav-state.css?v=20261020-8"><script src="nav-state.js?v=20261020-8" defer></script><link rel="stylesheet" href="typography.css?v=20261020-8"><link rel="stylesheet" href="interaction-refinements.css?v=20261020-8"></head>
+<body class="book-page">
+<header class="specimen-header"><a class="brand" href="index.html?v=20261020-8">SHADOW<br>STUDY</a><nav aria-label="Chapter navigation"><a href="shadow.html?v=20261020-8">01 Shadow</a><a href="observation.html?v=20261020-8">02 Observation</a><a href="typeface.html?v=20261020-8">03 Typeface</a><a href="photo-collections.html?v=20261020-8">04 Photos</a><a href="book.html?v=20261020-8" aria-current="page">05 Book</a></nav><a class="specimen-back" href="chapters.html?v=20261020-8">All chapters </a></header>
+<main>
+<section class="book-reader" aria-labelledby="book-heading">
+ <div class="book-intro"><h1 id="book-heading">Connected Book</h1><p>A study of the self, held between pages.</p></div>
+ <div class="edition-switch" role="group" aria-label="Choose book pages"><button type="button" data-edition="pages" aria-pressed="true">The book <span>34 pages</span></button><button type="button" data-edition="layers" aria-pressed="false">Colour layers <span>7 pages</span></button></div>
+ <div class="reader-area">
+  <div class="flat-book is-cover" id="flat-book" role="region" tabindex="0" aria-label="Book reader. Use the left and right arrow keys to turn pages." aria-busy="false">
+   <div class="book-spread"><div class="paper-page paper-left is-empty"><img alt="" hidden></div><div class="paper-page paper-right"><img src="assets/book/pages-01.webp" width="1600" height="1486" alt="Book page 1" draggable="false"></div></div>
+   <div class="book-loader" role="status" aria-label="Loading pages" hidden><span class="book-ring" aria-hidden="true"></span></div>
+   <div class="book-gutter" aria-hidden="true"></div>
+   <button type="button" class="page-hit hit-previous" aria-label="Previous pages" disabled></button><button type="button" class="page-hit hit-next" aria-label="Next pages"></button>
+  </div>
+ </div>
+ <div class="reader-controls"><button class="turn-button previous-page" type="button" aria-label="Previous pages" disabled>← <span>Previous</span></button><p class="page-status" aria-live="polite" aria-atomic="true">01 / 34</p><button class="turn-button next-page" type="button" aria-label="Next pages"><span>Next</span> →</button></div>
+ <p class="reader-hint">Click either side to turn the page. <span>Or use ← and →.</span></p>
+ <p class="reader-error" role="alert" hidden>That page could not load. Please try again.</p>
+ <noscript><p>Enable JavaScript to turn the pages. <a href="assets/book/pages-01.webp">View the first page ↗</a></p></noscript>
+</section>
+<section class="acetate-study" aria-labelledby="acetate-title">
+ <div class="acetate-heading"><h2 id="acetate-title">Between the pages.</h2><p>Move across the pages. Scroll to shift the layers.</p></div>
+ <div class="acetate-tabs" role="group" aria-label="Choose a transparent page study"><button type="button" data-study="alphabet" aria-pressed="true">Alphabet</button><button type="button" data-study="shadow" aria-pressed="false">Shadow</button></div>
+ <div class="acetate-stage" tabindex="0" role="region" aria-label="Move the transparent layers with your pointer, scroll, or the arrow keys.">
+  <div class="page-study study-alphabet" data-page-study="alphabet">
+   <div class="study-page"><img class="study-base" src="assets/book/pages-16.webp" alt="Gray green letter shadows, A to E, K to O and U to W." loading="lazy" draggable="false"><img class="study-overlay" src="assets/book/layers-03.webp" alt="Pink letterforms printed on a transparent sheet." loading="lazy" draggable="false"></div>
+   <div class="study-page"><img class="study-base" src="assets/book/pages-17.webp" alt="Gray green letter shadows, F to J, P to T and X to Z." loading="lazy" draggable="false"><img class="study-overlay" src="assets/book/layers-04.webp" alt="The second transparent alphabet sheet." loading="lazy" draggable="false"></div>
+  </div>
+  <div class="page-study study-shadow" data-page-study="shadow" hidden>
+   <div class="study-page"><img class="study-base" src="assets/book/pages-07.webp" alt="Shadow: a study of identity, memory, absence, and the other self. The opening printed page." loading="lazy" draggable="false"><img class="study-overlay" src="assets/book/layers-01.webp" alt="A transparent SHADOW letterform sheet over the printed introduction." loading="lazy" draggable="false"></div>
+  </div>
+ </div>
+ <div class="acetate-density"><label for="layer-density">Ink density <output id="density-value" for="layer-density">72%</output></label><input id="layer-density" type="range" min="15" max="100" value="72" aria-label="Ink density"></div>
+</section></main>
+<footer class="book-footer"><a href="photo-collections.html?v=20261020-8"> Photo collections</a><span>05 / FROM PAGE TO SCREEN</span><a href="chapters.html?v=20261020-8">All chapters </a></footer>
+</body></html>

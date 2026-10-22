@@ -1,0 +1,5 @@
+/* Strong secondary hierarchy, keeping the long-form reading text in regular weight. */
+body :is(h2,h3,h4,h5,h6,.label,.eyebrow,.section-heading,.section-intro,.chapter-note,.chapter-no,.hero-meta,.hero-light-note,figcaption,.reading-heading,.shadow-intro,.specimen-instruction,.specimen-caption p,.alphabet-heading,.video-heading,.acetate-heading p,.book-intro h1,.book-intro p,.reader-controls,.turn-button span,.text-link,.contact-email,.edition-switch button,.edition-switch button span,.reader-hint,.page-status,.acetate-tabs button,.acetate-density label,.acetate-density output,.photo-reel-heading h1,.intro-caption){font-weight:800!important;font-synthesis:weight}
+body :is(h2,h3){-webkit-text-stroke:.12px currentColor}
+footer,.page-footer,.specimen-footer{font-weight:800}
+html[data-chapter-tone="green"] .site-header nav a:hover,html[data-chapter-tone="green"] .site-header nav a:focus-visible{color:#c06b8d}

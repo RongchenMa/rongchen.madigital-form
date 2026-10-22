@@ -1,0 +1,8 @@
+/* A clear size and weight step for the current page, with no dot or underline. */
+.site-header nav,.specimen-header nav{align-items:baseline}
+.site-header nav a,.specimen-header nav a{display:inline-block;font-size:1em;font-weight:500;-webkit-text-stroke:0 currentColor;text-decoration:none;transition:font-size 280ms ease,font-weight 280ms ease,-webkit-text-stroke-width 280ms ease,color 250ms ease;font-synthesis:weight}
+.site-header nav a:hover,.specimen-header nav a:hover,.site-header nav a:focus-visible,.specimen-header nav a:focus-visible{font-weight:950;-webkit-text-stroke:.45px currentColor}
+.site-header nav a[aria-current],.specimen-header nav a[aria-current]{font-size:1.12em;font-weight:1000;-webkit-text-stroke:.9px currentColor}
+.site-header .brand,.specimen-header .brand{font-weight:900;-webkit-text-stroke:.18px currentColor}
+.site-header nav a[aria-current]::after,.specimen-header nav a[aria-current]::after{content:none}
+@media(prefers-reduced-motion:reduce){.site-header nav a,.specimen-header nav a{transition:none}}

@@ -1,0 +1,40 @@
+.light-filter-defs{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+/* A single stretched silhouette. The black title has no shadow. */
+.hero .word-object,#hero-title{will-change:transform}
+#hero-title .title-row{transform:none;will-change:auto}
+#hero-title .title-row>span{text-shadow:none}
+.hero .word-object{isolation:isolate;filter:none}
+.hero .word-object>.word-tilt{position:relative;z-index:2;filter:drop-shadow(2px 3px 1px #15221922)}
+.word-projection{position:absolute;inset:0;z-index:-1;pointer-events:none;transform:translate(70px,90px) scale(1.28);transform-origin:50% 50%;opacity:.23}
+.word-projection .word-tilt{filter:grayscale(1) brightness(0) blur(var(--shadow-blur,2px))!important}
+.word-projection img{filter:none!important}
+.hero-light-note{position:absolute;right:3.4vw;top:1px;font-size:9px;letter-spacing:.08em;color:#596353;z-index:3}
+/* Two studies from the physical book; no sheet outlines or control panels. */
+.acetate-study{padding:65px 3.4vw 80px;overflow:hidden;background:#fff}
+.acetate-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px}
+.acetate-heading h2{font-size:clamp(28px,3.3vw,46px);line-height:1.1;letter-spacing:-.04em;font-weight:400;margin:0}
+.acetate-heading p{font-size:11px;color:#777;margin:0;line-height:1.5}
+.acetate-tabs{display:flex;justify-content:center;gap:30px;margin:45px 0 12px}
+.acetate-tabs button{border:0;background:none;padding:8px 4px;color:#888;font:inherit;font-size:11px;cursor:pointer;transition:color .3s,font-weight .3s}
+.acetate-tabs button[aria-pressed=true]{font-weight:700;color:#111}
+.acetate-stage{--sheet-x:18px;--sheet-y:14px;--sheet-angle:0deg;--density:.72;min-height:260px;height:clamp(330px,45vw,660px);display:grid;place-items:center;position:relative;cursor:ew-resize;touch-action:pan-y;outline-offset:5px}
+.page-study{width:min(100%,1120px);display:flex;justify-content:center;align-items:center;gap:12px;isolation:isolate}
+.page-study[hidden]{display:none}
+.study-page{position:relative;width:50%;min-width:0}
+.study-base{display:block;width:100%;height:auto;user-select:none}
+.study-overlay{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:var(--density);mix-blend-mode:multiply;transform:translate(var(--sheet-x),var(--sheet-y)) rotate(var(--sheet-angle));transform-origin:50% 75%;pointer-events:none;user-select:none;will-change:transform}
+.study-page:nth-child(2) .study-overlay{transform:translate(calc(var(--sheet-x) * .85),calc(var(--sheet-y) * -1)) rotate(calc(var(--sheet-angle) * -.8))}
+.study-shadow{max-width:560px}.study-shadow .study-page{width:100%}
+.acetate-density{width:240px;margin:20px auto 0;font-size:10px}
+.acetate-density label{display:flex;justify-content:space-between;gap:20px;color:#555}
+.acetate-density output{font-variant-numeric:tabular-nums;color:#777}
+.acetate-density input{display:block;width:100%;accent-color:#60795e;margin:14px 0 0;cursor:pointer}
+.acetate-tabs button:focus-visible,.acetate-density input:focus-visible,.acetate-stage:focus-visible{outline:2px solid #416c4b;outline-offset:5px}
+.specimen-glyph{isolation:isolate;overflow:visible}
+.glyph-echo{position:absolute;inset:0;pointer-events:none;z-index:-1;mix-blend-mode:multiply}
+.specimen-glyph .glyph-echo .custom-letter,.specimen-glyph .glyph-echo .druk-letter{transition:none}
+.glyph-echo .custom-letter img{filter:url('#cast-pink')!important}
+.glyph-echo:nth-of-type(even) .custom-letter img{filter:url('#cast-green')!important}
+.glyph-echo .druk-letter{color:#799a73;-webkit-text-stroke:0}
+@media(max-width:700px){.hero-light-note{right:5vw;font-size:8px}.acetate-study{padding:45px 5vw 65px}.acetate-heading{display:block}.acetate-heading p{margin-top:14px;max-width:250px}.acetate-tabs{margin-top:28px}.acetate-stage{height:260px}.page-study{gap:6px;width:100%}.study-shadow{width:80%}.acetate-density{width:210px;margin-top:10px}.word-projection{opacity:.2}}
+@media(prefers-reduced-motion:reduce){.glyph-echo{display:none}.study-overlay{will-change:auto}}

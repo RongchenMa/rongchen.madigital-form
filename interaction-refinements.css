@@ -1,0 +1,21 @@
+/* Corner navigation relies on weight, without rules or directional ornaments. */
+footer,.page-footer,.specimen-footer,.book-footer{border-top:0!important}
+footer a,header .specimen-back,.intro-skip,.hero-meta a,.hero-light-note,.hero-meta>span,.shadow-colophon a,main a.text-link{font-weight:500!important;-webkit-text-stroke:0 currentColor;text-decoration:none!important;border-bottom:0!important;transition:font-weight 280ms ease,-webkit-text-stroke-width 280ms ease,color 250ms ease}
+footer a:hover,footer a:focus-visible,.hero-light-note:hover,.hero-meta>span:hover,header .specimen-back:hover,header .specimen-back:focus-visible,.intro-skip:hover,.intro-skip:focus-visible,.hero-meta a:hover,.hero-meta a:focus-visible,.shadow-colophon a:hover,.shadow-colophon a:focus-visible,main a.text-link:hover,main a.text-link:focus-visible{font-weight:950!important;-webkit-text-stroke:.45px currentColor;text-decoration:none!important}
+.photo-reel-track{transition:none!important}
+.photo-reel-window{touch-action:none;outline-offset:-5px}
+.photo-reel-window:focus-visible{outline:2px solid #c06b8d}
+/* The image itself is the browse surface; a single circle follows the pointer. */
+.slide-step{position:absolute;top:0;bottom:0;width:50%;z-index:4;border:0;border-radius:0;padding:0;background:none;color:#c06b8d;cursor:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.slide-previous{left:0}.slide-next{right:0}
+.slide-step:focus{outline:none}
+.slide-browse-icon{position:absolute;left:var(--browse-x,75%);top:var(--browse-y,50%);z-index:5;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#313f2e;color:#c06b8d;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity 160ms ease,transform 220ms ease}
+.slide-browse-icon svg,.mobile-slide-icon svg{width:28px;height:28px;display:block;fill:currentColor}
+.slide-window.is-browsing .slide-browse-icon,.slide-window.has-browse-focus .slide-browse-icon{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.slide-window.is-previous .slide-browse-icon svg{transform:rotate(180deg)}
+.slide-window.has-browse-focus .slide-browse-icon{box-shadow:0 0 0 3px #c06b8d}
+.mobile-slide-icon{display:none}
+.slide-announcement{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.slideshow.is-manual .slide-image{transition-duration:260ms}
+@media(hover:none),(pointer:coarse){.slide-step{cursor:pointer}.slide-browse-icon{display:none}.mobile-slide-icon{position:absolute;bottom:14px;width:42px;height:42px;border-radius:50%;background:#313f2e;color:#c06b8d;display:grid;place-items:center}.slide-previous .mobile-slide-icon{left:14px}.slide-next .mobile-slide-icon{right:14px}.slide-previous .mobile-slide-icon svg{transform:rotate(180deg)}.slide-step:focus-visible .mobile-slide-icon{box-shadow:0 0 0 3px #c06b8d}}
+@media(prefers-reduced-motion:reduce){footer a,header .specimen-back,.intro-skip,.hero-meta a,.shadow-colophon a,main a.text-link,.slide-browse-icon{transition:none}.slideshow.is-manual .slide-image{transition:none}}

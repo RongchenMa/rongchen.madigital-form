@@ -1,0 +1,27 @@
+/* Chapter one shares the quiet editorial language of Observation. */
+.shadow-page{overflow-x:clip}
+.shadow-title-field{padding:5vw 0 8vw;min-height:76svh}
+.shadow-title-field .eyebrow{display:flex;justify-content:space-between;gap:20px;font-size:10px;margin:0 0 4vw}
+#shadow-title{font-size:clamp(60px,8.4vw,145px);line-height:.88;letter-spacing:-.025em;-webkit-text-stroke:0}
+#shadow-title>span{display:block;width:max-content;max-width:100%}
+#shadow-title .title-offset{margin-left:12vw}
+.shadow-intro{font-size:clamp(16px,1.45vw,23px);line-height:1.35;letter-spacing:-.01em;margin:3vw 0 0 3px;max-width:370px}
+.shadow-mark{right:2vw;bottom:2vh;width:min(67vw,1080px);height:clamp(100px,19vw,260px);opacity:.66}
+.shadow-mark img{width:calc(100% / 6)}
+.shadow-mark img:nth-child(2n){transform:translateY(-3%) rotate(3deg)}
+.shadow-mark img:nth-child(3n){transform:translateY(3%) rotate(-3deg)}
+.shadow-reading{position:relative;z-index:1;padding-top:20px;min-height:62svh}
+.shadow-reading .reading-heading h2{font:inherit;margin:0;font-weight:400;letter-spacing:.025em}
+.shadow-reading .reading-grid{grid-template-columns:1.05fr 1fr 1.05fr;gap:4vw}
+.shadow-reading .text-column{font-size:clamp(16px,1.25vw,21px)}
+.shadow-reading .text-column:nth-child(2){font-size:clamp(18px,1.5vw,24px);padding-top:65px}
+.shadow-reading .text-column:nth-child(3){padding-top:20px}
+.shadow-reading .passage{margin-bottom:32px;--zoom:1.38;--duration:650ms;--ease:cubic-bezier(.22,.61,.36,1)}
+.shadow-reading .passage-copy{line-height:1.22;transition:font-size var(--duration) var(--ease),line-height var(--duration) var(--ease),-webkit-text-stroke-width var(--duration) var(--ease)}
+@media(hover:hover){.shadow-reading .passage:hover .passage-copy{font-size:calc(1em * var(--zoom));line-height:1.04;-webkit-text-stroke-width:.85px}}
+.shadow-reading .passage:focus-visible .passage-copy{font-size:calc(1em * var(--zoom));line-height:1.04;-webkit-text-stroke-width:.85px}
+.shadow-colophon{display:flex;justify-content:space-between;gap:25px;font-size:9px;letter-spacing:.025em;padding-top:35px}
+.shadow-colophon a{font-size:11px}
+.shadow-page .page-footer{padding-top:100px}
+@media(max-width:760px){.shadow-title-field{padding:35px 0 75px;min-height:69svh}.shadow-title-field .eyebrow{font-size:9px;margin-bottom:65px}.shadow-title-field .eyebrow span:last-child{max-width:110px;text-align:right}#shadow-title{font-size:12vw;line-height:.93}#shadow-title .title-offset{margin-left:5vw}.shadow-intro{font-size:17px;margin-top:30px}.shadow-mark{width:90vw;height:28vw;right:3vw;bottom:4vh;opacity:.56}.shadow-reading{padding-top:0}.shadow-reading .reading-heading{font-size:8px;gap:12px;align-items:baseline}.shadow-reading .reading-heading span{white-space:nowrap}.shadow-reading .reading-grid{grid-template-columns:1fr;gap:0}.shadow-reading .text-column,.shadow-reading .text-column:nth-child(2){font-size:17px;padding-top:0}.shadow-reading .text-column:nth-child(3){padding-top:0}.shadow-reading .passage{margin-bottom:27px}.shadow-colophon{flex-wrap:wrap;font-size:8px;padding-top:18px}.shadow-page .page-footer{padding-top:65px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){.shadow-reading .passage-copy{transition:none}}
